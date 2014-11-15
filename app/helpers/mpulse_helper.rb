@@ -1,0 +1,2 @@
+module MpulseHelper
+end
