@@ -1,0 +1,15 @@
+<div id="songHolder"></div>
+
+<%= @song %>
+
+
+
+
+<div ng-app="song" ng-controller="SongController as song">
+  <b>Find a Song:</b>
+  <div>
+    Sond ID: <input type="text" ng-model="song.id" required >
+  </div>
+    <button class="btn" ng-click="song.find()">Find</button>
+  </div>
+</div>
