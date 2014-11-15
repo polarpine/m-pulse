@@ -2,12 +2,16 @@
 
 
 <div ng-app="song" ng-controller="SongController as song">
-  <b>Find a Song:</b>
-  <div>
-    Spotify Song ID: <input type="text" ng-model="song.id" required >
-  </div>
-    <button class="btn" ng-click="song.find()">Find</button>
-  </div>
+	<b>Find a Song:</b>
+	<div>
+		Spotify Song ID: <input type="text" ng-model="song.id" required >
+	</div>
+	<button class="btn" ng-click="song.find()">Find</button>
+	<button class="btn" ng-click="song.login()">Log In</button>
+
+
 </div>
+
+
 
 
