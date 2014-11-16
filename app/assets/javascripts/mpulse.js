@@ -18,7 +18,8 @@ var findSong = function (query) {
 
 angular.module('song', [])
 .controller('SongController', function() {
-  this.id = '3L7BcXHCG8uT92viO6Tikl';
+  // this.id = '3L7BcXHCG8uT92viO6Tikl';
+  this.id = '34gCuhDGsG4bRPIf9bb02f';
   this.login = function logUserIn() {
     userLogin()
     console.log('you are logging in to Spotify');
