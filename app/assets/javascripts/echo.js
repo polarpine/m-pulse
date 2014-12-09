@@ -8,9 +8,9 @@ var findTempo = function (min, max) {
   $.ajax({
     url: 'http://developer.echonest.com/api/v4/song/search?api_key=XVGKI8UKHAE9MSPJ5&max_tempo='+ max + '&min_tempo='+ min +'&results=6&bucket=id:spotify&bucket=tracks&limit=true',
     success: function (response) {
-    	console.log(response.response.songs[0].tracks[0].foreign_id)
     	var song_id = response.response.songs[0].tracks[0].foreign_id.slice(14)
     	console.log(song_id)
+    	findSong(song_id)
 
 
 
