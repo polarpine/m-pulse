@@ -1,18 +1,19 @@
-<div id="songHolder"></div>
-<div id="songPlayer"><iframe src='https://embed.spotify.com/?uri=spotify:track:' frameborder="0" allowtransparency="true"></iframe></div>
+<div class="homepage">
+  <div id="songHolder"></div>
+  <div id="songPlayer"><iframe src='https://embed.spotify.com/?uri=spotify:track:' frameborder="0" allowtransparency="true"></iframe></div>
 
 
-<div ng-app="song" ng-controller="SongController as song">
-	<b>Find a Song:</b>
-	<div>
-		Spotify Song ID: <input type="text" ng-model="song.id" required >
-	</div>
-	<button class="btn" ng-click="song.find()">Find</button>
-	<button class="btn" ng-click="song.login()">Log In</button>
+  <div ng-app="song" ng-controller="SongController as song">
+  	<b>Find a Song:</b>
+  	<div>
+  		Spotify Song ID: <input type="text" ng-model="song.id" required >
+  	</div>
+  	<button ng-click="song.find()">Find</button>
+  	<button ng-click="song.login()">Log In</button>
 
 
+  </div>
 </div>
-
 
 
 
