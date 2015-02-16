@@ -1,0 +1,12 @@
+body {
+  background-color: #303030;
+  color: #C0C0C0;
+  font-family: 'Ek Mukta', sans-serif;
+}
+.homepage {
+  padding: 10%;
+  text-align: center;
+}
+.navbar a {
+  font-size: 1.15em;
+}
