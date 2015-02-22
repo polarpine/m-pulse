@@ -15,5 +15,17 @@
   </div>
 </div>
 
+<div ng-app="tempo" ng-controller="TempoController as tempo">
+	<b>Find Songs by Tempo (BPM):</b>
+	<div>
+		Minimum: <input type="text" ng-model="tempo.min" required >
+	</div>
+	<div>
+		Maximum: <input type="text" ng-model="tempo.max" required >
+	</div>
+	<button class="btn" ng-click="tempo.find()">Find</button>
+
+</div>
+
 
 
