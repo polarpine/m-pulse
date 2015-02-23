@@ -1,12 +1,46 @@
 body {
   background-color: #303030;
-  color: #C0C0C0;
+  color: #F8F8F8;
   font-family: 'Ek Mukta', sans-serif;
 }
 .homepage {
-  padding: 10%;
-  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+}
+.fixed-title {
+  height: 800px;
+  padding: 8%;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  background-color: #282828;
+}
+.title-top {
+  height: 150px;
+  width: 100%;
+  margin-bottom: 50%;
+  position: relative;
+}
+.top-image {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  -webkit-transition: height 0.8s;
+  -moz-transition: height 0.8s;
+  transition: height 0.8s;
+}
+.top-image:hover {
+  height: 200px;
 }
 .navbar a {
   font-size: 1.15em;
+}
+.intro-section {
+  min-height: 500px;
+  width: 100%;
+  padding: 5%;
+  background-color: #282828;
+}
+.line {
+  height: 500px;
+  border-right: solid #282828;
 }
