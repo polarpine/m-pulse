@@ -1,30 +1,41 @@
-<div class="homepage">
-  <div id="songHolder"></div>
-  <div id="songPlayer"><iframe src='https://embed.spotify.com/?uri=spotify:track:' frameborder="0" allowtransparency="true"></iframe></div>
-
-
-  <div ng-app="song" ng-controller="SongController as song">
-  	<b>Find a Song:</b>
-  	<div>
-  		Spotify Song ID: <input type="text" ng-model="song.id" required >
-  	</div>
-  	<button ng-click="song.find()">Find</button>
-  	<button ng-click="song.login()">Log In</button>
-
-
+<%= render partial: "navbar" %>
+<div class="container homepage">
+  <div class="fixed-title">
+    <div class="title-top">
+      <h1>Welcome to <img src="assets/mpulselogo.png" height="20px"/></h1>
+        <img src="assets/mpulse_grid.png" class="top-image"/>
+    </div>
   </div>
-</div>
-
-<div ng-app="tempo" ng-controller="TempoController as tempo">
-	<b>Find Songs by Tempo (BPM):</b>
-	<div>
-		Minimum: <input type="text" ng-model="tempo.min" required >
-	</div>
-	<div>
-		Maximum: <input type="text" ng-model="tempo.max" required >
-	</div>
-	<button class="btn" ng-click="tempo.find()">Find</button>
-
+  <div class="intro-section" id="GetStarted">
+    <h2>Get Started with mPULSE</h2>
+      <div>
+        If you have spotify you can start creating an mPULSE playlist right away!
+      </div>
+      <div>
+        Don't have Spotify?  No problem, just sign up for your free Spotify account here!
+      </div>
+  </div>
+  <section class="row">
+    <div class="line col-md-6">
+    </div>
+  </section>
+  <div class="intro-section" id="HowWorks">
+    <h2>How mPULSE Works</h2>
+  </div>
+  <section class="row">
+    <div class="line col-md-6">
+    </div>
+  </section>
+  <div class="intro-section" id="Train">
+    <h2>Train</h2>
+  </div>
+  <section class="row">
+    <div class="line col-md-6">
+    </div>
+  </section>
+  <div class="intro-section" id="About">
+    <h2>About Us</h2>
+  </div>
 </div>
 
 
