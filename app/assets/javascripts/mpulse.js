@@ -1,10 +1,12 @@
+//Specs for Spotify API
 var scopes = 'user-read-private playlist-read-private user-library-modify user-library-read playlist-modify-private playlist-modify-public'
 var my_client_id = '580cbd7871db4617af3efba743122a64'; // Your client id
 var my_secret = '41e55c17fba34ef68da571cb70207481'; // Your secret
 var redirect_uri = 'http://localhost:3000/callback'; // Your redirect uri
 
-
+//Simple Find Song Method
 var findSong = function (query) {
+  query = query || "34gCuhDGsG4bRPIf9bb02f"; //Song for Melissa :)
   $.ajax({
     url: 'https://api.spotify.com/v1/tracks/' + query,
     success: function (response) {
@@ -16,23 +18,10 @@ var findSong = function (query) {
   });
 };
 
-angular.module('song', [])
-.controller('SongController', function() {
-  // this.id = '3L7BcXHCG8uT92viO6Tikl';
-  this.id = '34gCuhDGsG4bRPIf9bb02f';
-  this.login = function logUserIn() {
-    userLogin()
-    console.log('you are logging in to Spotify');
-  };
-  this.find = function getSong() {
-    console.log(this);
-    findSong(this.id)
-  };
-});
 
 
 
-
+//Login to Spotify
 
 var userLogin = function() {
   var url = 'https://accounts.spotify.com/authorize/?client_id=' + my_client_id + '&response_type=code&redirect_uri=' + redirect_uri + '&scope=' + scopes
