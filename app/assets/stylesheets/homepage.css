@@ -3,6 +3,12 @@ body {
   color: #F8F8F8;
   font-family: 'Ek Mukta', sans-serif;
 }
+.medium {
+  font-size: 1.25em;
+}
+.large {
+  font-size: 2em;
+}
 .homepage {
   font-family: 'Quicksand', sans-serif;
 }
@@ -16,8 +22,35 @@ body {
 .title-top {
   height: 150px;
   width: 100%;
-  margin-bottom: 50%;
   position: relative;
+}
+.title-bottom {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+.title-buttons {
+  height: 450px;
+  width: 23%;
+  margin: 1%;
+  background-color: #0066FF;
+  float: left;
+  opacity: 0.8;
+  color: white;
+}
+.title-buttons:hover {
+  opacity: 1;
+}
+.title-btn-txt {
+  opacity: 0;
+  height: 100%;
+  padding: 2%;
+  -webkit-transition: opacity 0.8s;
+  -moz-transition: opacity 0.8s;
+  transition: opacity 0.8s;
+}
+.title-btn-txt:hover {
+  opacity: 1;
 }
 .top-image {
   width: 100%;
