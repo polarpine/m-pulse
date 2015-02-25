@@ -24,34 +24,6 @@ body {
   width: 100%;
   position: relative;
 }
-.title-bottom {
-  text-align: center;
-  display: inline-block;
-  width: 100%;
-}
-.title-buttons {
-  height: 450px;
-  width: 23%;
-  margin: 1%;
-  background-color: #0066FF;
-  float: left;
-  opacity: 0.8;
-  color: white;
-}
-.title-buttons:hover {
-  opacity: 1;
-}
-.title-btn-txt {
-  opacity: 0;
-  height: 100%;
-  padding: 2%;
-  -webkit-transition: opacity 0.8s;
-  -moz-transition: opacity 0.8s;
-  transition: opacity 0.8s;
-}
-.title-btn-txt:hover {
-  opacity: 1;
-}
 .top-image {
   width: 100%;
   height: 50px;
@@ -61,8 +33,43 @@ body {
   -moz-transition: height 0.8s;
   transition: height 0.8s;
 }
-.top-image:hover {
+.title-top:hover .top-image {
   height: 200px;
+}
+.title-bottom {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+.title-buttons {
+  height: 70px;
+  width: 23%;
+  margin: 1%;
+  background-color: #303030;
+  float: left;
+  color: white;
+  -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  transition: background-color 1s;
+  -webkit-transition: height 0.5s;
+  -moz-transition: height 0.5s;
+  transition: height 0.5s;
+}
+.title-buttons:hover {
+  height: 250px;
+  background-color: #0066FF;
+  font-weight: normal;
+}
+.title-btn-txt {
+  opacity: 0;
+  height: 100%;
+  padding: 2%;
+  -webkit-transition: opacity .2s;
+  -moz-transition: opacity .2s;
+  transition: opacity .2s;
+}
+.title-buttons:hover .title-btn-txt {
+  opacity: 1;
 }
 .navbar a {
   font-size: 1.15em;
