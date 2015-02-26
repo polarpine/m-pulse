@@ -55,7 +55,7 @@ body {
   height: 70px;
   width: 23%;
   margin: 1%;
-  background-color: #303030;
+  background-color: rgba(0,0,0,0.6);
   float: left;
   color: white;
   -webkit-transition: background-color 1s;
