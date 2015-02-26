@@ -2,6 +2,10 @@ body {
   background-color: #303030;
   color: #F8F8F8;
   font-family: 'Ek Mukta', sans-serif;
+  background-image: url('running_bkgrd2.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 .medium {
   font-size: 1.25em;
@@ -13,16 +17,22 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 .fixed-title {
-  height: 800px;
-  padding: 8%;
-  margin-top: 80px;
-  margin-bottom: 40px;
-  background-color: #282828;
+  height: 1000px;
+  width: 100%;
+  padding: 15%;
+  margin-bottom: 100px;
+  /*background-color: #282828;*/
+}
+.title {
+  margin-left: 50px;
 }
 .title-top {
-  height: 150px;
+  height: 200px;
   width: 100%;
+  padding-top: 30px;
   position: relative;
+  background-color: rgba(0,0,0,0.7);
+  border-radius: 3px;
 }
 .top-image {
   width: 100%;
