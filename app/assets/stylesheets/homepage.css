@@ -67,7 +67,7 @@ body {
 }
 .title-buttons:hover {
   height: 250px;
-  background-color: #0066FF;
+  background-color: rgba(0,100,250,0.7);
   font-weight: normal;
 }
 .title-btn-txt {
