@@ -1,0 +1,30 @@
+.side-nav {
+  position: fixed;
+  margin-top: 0;
+  margin-left: 0;
+  height: 100%;
+  width: 7%;
+  background-color: rgba(80,80,80, 1);
+  text-align: center;
+}
+.side-nav-img {
+  width: 90%;
+}
+.side-nav-btn {
+  width: 100%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  background-color: rgba(80, 80, 80, 0.7);
+  border-top: solid thin gray;
+  border-bottom: solid thin gray;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  -webkit-transition: width 0.5s;
+  -moz-transition: width 0.5s;
+  transition: width 0.5s;
+}
+.side-nav-btn:hover {
+  background-color: rgba(150,150,150, 1);
+  width: 120%;
+  border-radius: 3px;
+}

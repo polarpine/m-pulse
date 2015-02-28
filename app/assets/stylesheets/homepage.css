@@ -94,6 +94,9 @@ body {
   padding: 5%;
   background-color: rgba(0,0,0,0.8);
 }
+.intro-section a {
+  text-decoration: none;
+}
 .line {
   height: 500px;
   border-right: solid #282828;
