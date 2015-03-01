@@ -35,7 +35,6 @@ var findSong = function (query) {
 //Your Consumer Key: f67ca1657e0d8c3463732334ebeddd0a 
 //Your Shared Secret: 1GcfsztMRf6Vq7o44+tuuQ
 
-"http://developer.echonest.com/api/v4/song/search?api_key=XVGKI8UKHAE9MSPJ5&style=rock&max_tempo=150&min_tempo=140&results=10"
 
 var findSongsByTempo = function (min, max, style) {
 	min = min || '200'
