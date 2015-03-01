@@ -4,4 +4,18 @@
   margin-top: 5%;
   padding: 3%;
   background-color: rgba(0,0,0,0.8);
+  font-family: 'Quicksand', sans-serif;
+}
+.static-banner {
+  width: 100%;
+  height: 150px;
+  background-image: url('landscape_run.jpg');
+  background-size: cover;
+  padding: 2%;
+  padding-left: 7%;
+}
+.static-title {
+  background-color: rgba(0,0,0,0.7);
+  padding: 10px;
+  width: 320px;
 }
