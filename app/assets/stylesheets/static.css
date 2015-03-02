@@ -1,6 +1,7 @@
 .static-page {
-  min-height: 500px;
+  min-height: 700px;
   width: 100%;
+  /*margin-left: 10%;*/
   margin-top: 5%;
   padding: 3%;
   background-color: rgba(0,0,0,0.8);
@@ -8,7 +9,7 @@
 .static-banner {
   width: 100%;
   height: 150px;
-  background-image: url('landscape_run.jpg');
+  background-image: url('landscape_banner.jpg');
   background-size: cover;
   padding: 2%;
   padding-left: 7%;
