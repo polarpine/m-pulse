@@ -1,10 +1,9 @@
 .static-page {
-  min-height: 700px;
+  min-height: 500px;
   width: 100%;
   margin-top: 5%;
   padding: 3%;
   background-color: rgba(0,0,0,0.8);
-  font-family: 'Quicksand', sans-serif;
 }
 .static-banner {
   width: 100%;
@@ -15,7 +14,14 @@
   padding-left: 7%;
 }
 .static-title {
-  background-color: rgba(0,0,0,0.7);
-  padding: 10px;
-  width: 320px;
+  /*background-color: rgba(0,0,0,0.7);*/
+  padding: 10px 10px 10px 40px;
+  width: 600px;
+  font-family: 'Quicksand', sans-serif;
 }
+.static-para {
+  padding: 10px 10px 10px 40px;
+  font-size: 1.7em;
+  font-family: 'Quicksand', sans-serif;
+}
+
