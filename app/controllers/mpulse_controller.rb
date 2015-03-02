@@ -3,7 +3,7 @@ class MpulseController < ApplicationController
   def index
   end
 
-  def about
+  def info
   end
 
 end
