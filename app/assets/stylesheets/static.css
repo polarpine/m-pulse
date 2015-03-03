@@ -1,5 +1,5 @@
 .static-page {
-  min-height: 700px;
+  min-height: 500px;
   width: 100%;
   /*margin-left: 10%;*/
   margin-top: 5%;
@@ -25,4 +25,29 @@
   font-size: 1.7em;
   font-family: 'Quicksand', sans-serif;
 }
-
+.team-pics{
+  height: 200px;
+  padding: 40px;
+  float: left;
+}
+.pic-wrapper {
+  position: relative;
+  display: block;
+}
+.team-name {
+  position: absolute;
+  top: 0;
+  color: #ffffff;
+  width: 200px;
+  line-height: 300px;
+  text-align: center;
+  z-index: 10;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.team-name:hover {
+  opacity: 1;
+}
