@@ -1,0 +1,59 @@
+.flipper-container {
+  display: inline-block;
+}
+.flip-container {
+  -ms-perspective: 1000;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+  float: left;
+  margin: 20px;
+}
+
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  -ms-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+  width: 300px;
+  height: 300px;
+}
+
+
+.flipper {
+  -ms-transition: 1s;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -ms-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+
+.front, .back {
+  -ms-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  -ms-transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+
+.back {
+  -ms-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
