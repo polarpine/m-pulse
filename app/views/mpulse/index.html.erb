@@ -51,16 +51,38 @@
     <div class="line col-md-6">
     </div>
   </section>
-  <div class="intro-section" id="HowWorks">
+  <div class="intro-section flipper-container" id="HowWorks">
     <h2>How <img src="assets/mpulselogo.png" height="16px"/> Works</h2>
-      <div class="sliderbtn">
-        <img src="assets/echonest.gif" class="sliderimg">
-        <div class="slider-text large"><br>We use the Echonest API to get the beats per minute of your favorite workout songs.</div>
+      <p class="medium">
+        Using both Echonest and Spotify we are able to bring you playlists that are specifically tailored for your own workout, run or training.  All you need to do is enter in your running pace or the beats per minute (BPM) that you need and you can get suggested playlists or create your own that will work best for you.
+      </p>
+      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+        <div class="flipper">
+          <div class="front">
+            <!-- front content -->
+            <div>
+              <img src="assets/echonest.gif" class="sliderimg">
+            </div>
+          </div>
+          <div class="back">
+            <!-- back content -->
+            <div class="large">
+              We use the Echonest API to get the beats per minute of your favorite workout songs.
+            </div>
+          </div>
+        </div>
       </div>
-      <br>
-      <div class="sliderbtn">
-        <img src="assets/spotify.png" height="200" class="sliderimg">
-        <div class="slider-text large"><br>Using Spotify, you can create playlists based on your running pace</div>
+      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+        <div class="flipper">
+          <div class="front">
+            <!-- front content -->
+            <img src="assets/spotify.png" height="200" class="sliderimg">
+          </div>
+          <div class="back">
+            <!-- back content -->
+            <div class="large"><br>Using Spotify, you can create playlists based on your running pace</div>
+          </div>
+        </div>
       </div>
   </div>
   <section class="row">
