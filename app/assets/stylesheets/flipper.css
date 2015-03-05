@@ -57,3 +57,7 @@
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
+.flip-text {
+  background-color: rgba(60,60,60,0.7);
+  padding: 10px;
+}
