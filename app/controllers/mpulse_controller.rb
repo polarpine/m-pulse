@@ -3,7 +3,19 @@ class MpulseController < ApplicationController
   def index
   end
 
-  def info
+  def about
+  end
+
+  def team
+  end
+
+  def contact
+  end
+
+  def help
+  end
+
+  def faq
   end
 
 end
