@@ -7,7 +7,11 @@ Rails.application.routes.draw do
 
   get 'callback' => 'mpulse#index'
 
-  get '/info' => 'mpulse#info'
+  get '/about' => 'mpulse#about'
+  get '/team' => 'mpulse#team'
+  get '/contact' => 'mpulse#contact'
+  get '/help' => 'mpulse#help'
+  get '/faq' => 'mpulse#faq'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
