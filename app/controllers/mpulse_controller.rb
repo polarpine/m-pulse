@@ -18,6 +18,9 @@ class MpulseController < ApplicationController
   def faq
   end
 
+  def playlists
+  end
+
 end
 
 

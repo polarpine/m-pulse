@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get '/contact' => 'mpulse#contact'
   get '/help' => 'mpulse#help'
   get '/faq' => 'mpulse#faq'
+  get '/playlists' => 'mpulse#playlists'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
