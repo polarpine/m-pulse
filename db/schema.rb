@@ -11,12 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141114221217) do
+ActiveRecord::Schema.define(version: 20150308184241) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "mpulses", force: true do |t|
+  create_table "songs", force: true do |t|
+    t.string   "name"
+    t.string   "artist"
+    t.string   "spotifyID"
+    t.integer  "bpm"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
