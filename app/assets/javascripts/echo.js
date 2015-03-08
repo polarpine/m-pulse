@@ -83,3 +83,17 @@ var addSongToDB = function (song, spotify_id) {
       console.log("fail from song controller")
     });
 };
+
+var getNewPlaylist = function (bpm) {
+	var bpmObj = {song: {bpm_request: bpm}}
+    $.ajax({
+      url: '/song',
+      type: 'get',
+      data: bpmObj,
+      dataType: 'json'
+    }).done(function(data){
+      console.log(data)
+    }).fail(function(data){
+      console.log("fail from playlist controller")
+    });
+};
