@@ -26,10 +26,16 @@
   font-family: 'Quicksand', sans-serif;
 }
 .team_pic{
-  height: 250px;
-  padding: 40px;
+  height: 200px;
+  margin: 40px;
+  padding: 5px;
   float: left;
-  border-radius: 20%;
+  border-radius: 2px;
+}
+.team_pic:hover {
+  border: solid 5px #3366FF;
+  padding: 0px;
+  cursor: pointer;
 }
 .modal-title{
   color: #428bca;
