@@ -22,7 +22,6 @@ var findSong = function (query) {
       // $("#songHolder").html("You found: " + response.artists[0].name + " " + response.name)
       // $("iframe").attr('src', $('iframe').attr('src') + response.id)
       // $("#songPlayer").show()
-
       console.log("From Spotify: " + response.name + " by " + response.artists[0].name )
     }
   });
@@ -36,15 +35,17 @@ var findSong = function (query) {
 //Your Shared Secret: 1GcfsztMRf6Vq7o44+tuuQ
 
 
-var findSongsByTempo = function (min, max, style) {
-	min = min || '200'
+var findSongsByTempo = function (min, max, style, familiarity, hot) {
+	min = min || '200' //(bpms 0-500)
 	max = max || '330'
 	style = style || 'rock'
+	familiarity = familiarity || '0.5' //(0-1)
+	hot = hot || '.1' //(0-1)
 	$.ajax({
-		url: 'http://developer.echonest.com/api/v4/song/search?api_key=XVGKI8UKHAE9MSPJ5&style='+ style +'&max_tempo=' + max + '&min_tempo='+ min +'&results=10&bucket=id:spotify&bucket=tracks&limit=true',
+		url: 'http://developer.echonest.com/api/v4/song/search?api_key=XVGKI8UKHAE9MSPJ5&style='+ style +'&max_tempo=' + max + '&min_tempo='+ min +'&results=10&song_min_hotttnesss='+ hot + '&artist_min_familiarity=' + familiarity + '&bucket=id:spotify&bucket=tracks&limit=true',
 		success: function (response) {
-			console.log(response)
 			songs = response.response.songs
+			console.log(songs)
 			for (i = 0; i < songs.length ; i++) {
     			findSong(songs[i].tracks[0].foreign_id.slice(14));
 				}
@@ -57,12 +58,13 @@ var findSongsByTempo = function (min, max, style) {
 var findTempoOfSong = function (spotify_id) {
 	spotify_id = spotify_id || '34gCuhDGsG4bRPIf9bb02f'
 	$.ajax({
-		url:'http://developer.echonest.com/api/v4/song/profile?api_key=XVGKI8UKHAE9MSPJ5&track_id=spotify:track:'+ spotify_id +'&bucket=id:spotify&limit=true&bucket=audio_summary',
+		url:'http://developer.echonest.com/api/v4/song/profile?api_key=XVGKI8UKHAE9MSPJ5&track_id=spotify:track:'+ spotify_id +'&bucket=id:spotify&limit=true&bucket=audio_summary&bucket=song_hotttnesss&bucket=song_type&bucket=artist_hotttnesss',
 		success: function (response) {
 			console.log(response)
 			song = response.response.songs[0]
+			console.log(song)
 			console.log(song.title + " by " + song.artist_name + " has " + song.audio_summary.tempo + " bpms")
-			addSongMpulse(song, spotify_id)
+			// addSongMpulse(song, spotify_id)
 		
 		}
 	});
