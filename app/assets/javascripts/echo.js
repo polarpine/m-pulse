@@ -62,13 +62,13 @@ var findTempoOfSong = function (spotify_id) {
 			console.log(response)
 			song = response.response.songs[0]
 			console.log(song.title + " by " + song.artist_name + " has " + song.audio_summary.tempo + " bpms")
-			addSongToDB(song, spotify_id)
+			addSongMpulse(song, spotify_id)
 		
 		}
 	});
 };
 
-var addSongToDB = function (song, spotify_id) {
+var addSongMpulse = function (song, spotify_id) {
   var songObj = {
     song: {name: song.title, artist: song.artist_name, bpm: song.audio_summary.tempo, spotifyID: spotify_id }
     }
@@ -84,7 +84,7 @@ var addSongToDB = function (song, spotify_id) {
     });
 };
 
-var getNewPlaylist = function (bpm) {
+var getSongsMpulse = function (bpm) {
 	var bpmObj = {song: {bpm_request: bpm}}
     $.ajax({
       url: '/song',
