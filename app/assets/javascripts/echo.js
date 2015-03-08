@@ -59,11 +59,27 @@ var findTempoOfSong = function (spotify_id) {
 	$.ajax({
 		url:'http://developer.echonest.com/api/v4/song/profile?api_key=XVGKI8UKHAE9MSPJ5&track_id=spotify:track:'+ spotify_id +'&bucket=id:spotify&limit=true&bucket=audio_summary',
 		success: function (response) {
+			console.log(response)
 			song = response.response.songs[0]
 			console.log(song.title + " by " + song.artist_name + " has " + song.audio_summary.tempo + " bpms")
-
+			addSongToDB(song, spotify_id)
 		
 		}
 	});
 };
 
+var addSongToDB = function (song, spotify_id) {
+  var songObj = {
+    song: {name: song.title, artist: song.artist_name, bpm: song.audio_summary.tempo, spotifyID: spotify_id }
+    }
+    $.ajax({
+      url: '/song',
+      type: 'post',
+      data: songObj,
+      dataType: 'json'
+    }).done(function(data){
+      console.log("added new song to db")
+    }).fail(function(data){
+      console.log("fail from song controller")
+    });
+};
