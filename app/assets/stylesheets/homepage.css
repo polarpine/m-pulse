@@ -17,7 +17,7 @@ body {
   font-size: 2em;
 }
 .homepage {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 .fixed-title {
   height: 1000px;
@@ -69,7 +69,7 @@ body {
   transition: height 0.4s;
 }
 .title-buttons:hover {
-  height: 175px;
+  height: 200px;
   background-color: rgba(0,100,250,0.7);
   font-weight: normal;
 }
@@ -81,6 +81,12 @@ body {
 .title-buttons:hover .title-btn-txt {
   display: block;
   opacity: 1;
+}
+.title-buttons:hover h3 {
+  color: white;
+  font-size: 3em;
+  font-weight: bold;
+  text-decoration: underline;
 }
 .navbar a {
   font-size: 1.15em;
