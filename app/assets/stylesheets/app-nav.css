@@ -1,0 +1,61 @@
+.app-nav {
+  position: fixed;
+  margin-top: 0;
+  margin-left: 0;
+  height: 100%;
+  width: 10%;
+  background-color: rgba(0,0,0,0.9);
+  text-align: center;
+}
+.app-nav-img {
+  width: 90%;
+}
+.app-nav-imgbox {
+  height: 80px;
+  width: 100%;
+}
+.app-nav-imgbox:hover {
+  background-color: white;
+}
+.app-nav-btn {
+  width: 100%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  border-top: solid thin gray;
+  border-bottom: solid thin gray;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+a .app-nav-btn {
+  color: #F8F8F8;
+}
+.app-nav a {
+  text-decoration: none;
+}
+.app-nav-btn:hover {
+  background: rgba(50,50,50, 1);
+  border-radius: 3px;
+}
+.playlist-list {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+.playlist {
+  width: 100%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  text-align: center;
+}
+a .playlist {
+  color: #808080;
+  text-decoration: none;
+}
+a .playlist:hover {
+  color: #F8F8F8;
+}
+.playlist-list a {
+  text-decoration: none;
+}

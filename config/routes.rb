@@ -15,7 +15,11 @@ Rails.application.routes.draw do
   get '/contact' => 'mpulse#contact'
   get '/help' => 'mpulse#help'
   get '/faq' => 'mpulse#faq'
-  get '/playlists' => 'mpulse#playlists'
+
+  resources :playlists
+
+  get 'playlists/example' => 'playlists#example'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
