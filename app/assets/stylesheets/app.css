@@ -1,25 +1,113 @@
 .app-container {
   width: 100%;
   height: 100%;
-  padding: 5%;
+  margin-left:10%;
   position: fixed;
-  background-color: #404040;
+  background-color: rgba(0,0,0,0.8);
+  font-family: 'Raleway', sans-serif;
+  z-index: -1;
+}
+.app-header {
+  width: 75%;
+  top: 0;
+  height: 150px;
+  padding: 3%;
+  background-image: url('landscape_banner.jpg');
+  color: rgba(0,0,0,0.8);
+  z-index: -1;
+}
+.add_new_song {
+  padding: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgba(255,255,255,0.5);
+  color: black;
+  border-radius: 5px;
   font-family: 'Open Sans', sans-serif;
 }
-
-.playlist-container {
-  width: 55%;
+.add_new_song:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: #F8F8F8;
+}
+.app-header a:hover {
+  text-decoration: none;
+}
+.app-heading {
+  width: 75%;
+  color: #999999;
+  padding: 5px;
+  padding-top: 20px;
+  padding-left: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.25em;
+  border-bottom: solid thin gray;
+}
+.album-container {
+  width: 100%;
   height: 80%;
-  padding: 1%;
-  position: absolute;
-  background-color: #606060;
   overflow: scroll;
 }
-
-.playlist-section {
+.album-display {
+  display: inline-block;
+  width: 75%;
+}
+.album {
+  margin-top: 3%;
+  margin-left: 5%;
+  width: 20%;
+  height: 270px;
+  float: left;
+  background-color: rgba(60,60,60,0.8);
+}
+.album-art {
   width: 100%;
-  height: 100px;
-  margin-bottom: 5px;
-  padding: 3px;
-  background-color: #303030;
+}
+.album-text {
+  color: #F8F8F8;
+  padding: 5px;
+}
+.song-container {
+  width: 75%;
+  height: 80%;
+  /*padding: 1%;*/
+  /*position: absolute;*/
+  overflow: scroll;
+}
+.song-section {
+  width: 100%;
+  height: 50px;
+  padding: 1%;
+  border-top: solid thin #505050;
+  display: inline-block;
+}
+.song-section div {
+  float: left;
+}
+.playlist-headings {
+  height: 50px;
+  width: 75%;
+  padding: 1%;
+  color: #707070;
+  display: inline-block;
+  /*position: absolute;*/
+  z-index: 2;
+  background-color: rgba(0,0,0,0.5);
+}
+.playlist-headings div {
+  float: left;
+}
+.track {
+  width: 250px;
+}
+.artist {
+  width: 200px;
+}
+.time {
+  width: 150px;
+}
+.album {
+  width: 200px;
+}
+.bpm {
+  width: 150px;
 }
