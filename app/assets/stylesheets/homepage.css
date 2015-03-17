@@ -42,12 +42,9 @@ body {
   height: 20px;
   position: absolute;
   bottom: 0;
-  -webkit-transition: height 0.8s;
-  -moz-transition: height 0.8s;
-  transition: height 0.8s;
-}
-.title-top:hover .top-image {
-  height: 200px;
+  -webkit-transition: height 0.6s;
+  -moz-transition: height 0.6s;
+  transition: height 0.6s;
 }
 .title-bottom {
   text-align: center;
@@ -206,4 +203,16 @@ a .section-box {
   -webkit-transition: opacity 2s;
   -moz-transition: opacity 2s;
   transition: opacity 2s;
+}
+
+@media (max-width: 1024px) {
+  .top-image {
+    height: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .top-image {
+    height: 9px;
+  }
 }
