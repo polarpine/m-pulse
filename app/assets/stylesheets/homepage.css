@@ -234,6 +234,9 @@ a .section-box {
 }
 
 @media (max-width: 600px) {
+  body {
+    background-size: none;
+  }
   .fixed-title {
     padding: 3%;
     height: 600px;
