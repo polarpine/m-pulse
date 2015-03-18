@@ -7,6 +7,12 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
+html,body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
 .regular {
   font-size: 1.25em;
 }
@@ -79,11 +85,6 @@ body {
   display: block;
   opacity: 1;
 }
-.title-buttons:hover h3 {
-  color: white;
-  font-size: 3em;
-  font-weight: bold;
-}
 .navbar a {
   font-size: 1.15em;
 }
@@ -150,6 +151,11 @@ a .section-box {
 .section-box:hover {
   background-color: rgba(90, 90, 90, 0.7);
 }
+.started_img1 {
+  width: 90%;
+  margin-top: 72px;
+  margin-bottom: 50px;
+}
 .sliderbtn {
   width: 250px;
   height: 200px;
@@ -209,10 +215,83 @@ a .section-box {
   .top-image {
     height: 12px;
   }
+  .title-buttons {
+    height: 70px;
+  }
+  .title-buttons:hover {
+    height: 70px;
+  }
+  .title-btn-txt {
+    display: none;
+  }
+  .title-buttons:hover .title-btn-txt {
+    display: none;
+  }
+  .line {
+    height: 100px;
+    width: 50%;
+  }
 }
 
 @media (max-width: 600px) {
+  .fixed-title {
+    padding: 3%;
+    height: 600px;
+    margin-top: 100px;
+    margin-bottom: 0px;
+  }
+  .title {
+    margin-left: 20px;
+  }
   .top-image {
     height: 9px;
+  }
+  .title-buttons {
+    height: 70px;
+    width: 100%;
+  }
+  .title-buttons:hover {
+    height: 70px;
+    background-color: rgba(0,100,250,0.7);
+    font-weight: normal;
+  }
+  .section-box {
+    height: 220px;
+    width: 90%;
+    margin: 5%;
+    background-color: rgba(90, 90, 90, 0.7);
+    /*font-size: 0.8em;*/
+  }
+  .started_img1 {
+    width: 90%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .started_img2 {
+    width: 40%;
+    /*float: left;*/
+  }
+  .medium {
+    font-size: 1em;
+  }
+  .large {
+    font-size: 1.25em;
+  }
+  .container {
+    width: 100%;
+  }
+  .sliderbox {
+    width: 50%;
+  }
+  .runimg {
+    height: 150px;
+    margin: 10px;
+    /*float: none;*/
+  }
+}
+
+@media (max-width: 320px) {
+  .fixed-title {
+    margin-top: 50px;
   }
 }

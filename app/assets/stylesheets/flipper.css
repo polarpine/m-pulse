@@ -61,3 +61,13 @@
   background-color: rgba(60,60,60,0.7);
   padding: 10px;
 }
+
+@media (max-width: 600px) {
+  .flip-container, .front, .back {
+    width: 200px;
+    height: 200px;
+  }
+  .flipper img {
+    height: 150px;
+  }
+}
