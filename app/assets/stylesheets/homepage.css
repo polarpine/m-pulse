@@ -235,7 +235,18 @@ a .section-box {
 
 @media (max-width: 600px) {
   body {
-    background-size: none;
+    background-image: none;
+  }
+  .mobile-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    background-image: url('running_bkgrd2.jpg');
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    z-index: -100;
   }
   .fixed-title {
     padding: 3%;
