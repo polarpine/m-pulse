@@ -199,6 +199,9 @@ a .section-box {
 .sliderbox:hover {
   width: 100%;
   background-color: rgba(90, 90, 90, 0.3);
+  -webkit-transition: width 1.5s;
+  -moz-transition: width 1.5s;
+  transition: width 1.5s;
 }
 .runimg {
   height: 300px;
