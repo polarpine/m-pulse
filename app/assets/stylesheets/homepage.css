@@ -240,6 +240,9 @@ a .section-box {
   body {
     background-image: none;
   }
+  .navbar-brand img {
+    height: 10px;
+  }
   .mobile-background {
     position: fixed;
     top: 0;
