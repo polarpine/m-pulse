@@ -1,8 +1,11 @@
+.static-nav {
+  display: none;
+}
 .static-page {
   min-height: 500px;
   width: 100%;
   /*margin-left: 10%;*/
-  margin-top: 5%;
+  margin-top: 10%;
   padding: 3%;
   background-color: rgba(0,0,0,0.8);
 }
@@ -52,12 +55,18 @@
   font-size: .8em;
 }
 
+@media (max-width: 1024px) {
+  .static-nav {
+    display: block;
+  }
+  .static-sidenav {
+    display: none;
+  }
+}
+
 @media (max-width: 600px) {
   .static-page {
-    width: 100%;
-    margin-top: 5%;
-    padding: 3%;
-    background-color: rgba(0,0,0,0.8);
+    margin-top: 20%;
   }
   .static-title {
     padding: 10px 10px 10px 40px;
@@ -68,9 +77,6 @@
     padding: 10px 10px 10px 40px;
     font-size: 1.2em;
     font-family: 'Open Sans', sans-serif;
-  }
-  .static-nav {
-    display: none;
   }
   .team_pic {
     float: none;
