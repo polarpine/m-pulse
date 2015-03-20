@@ -61,15 +61,18 @@
   }
   .static-title {
     padding: 10px 10px 10px 40px;
-    width: 600px;
+    width: 90%;
     font-family: 'Open Sans', sans-serif;
   }
   .static-para {
     padding: 10px 10px 10px 40px;
-    font-size: 1.7em;
+    font-size: 1.2em;
     font-family: 'Open Sans', sans-serif;
   }
   .static-nav {
     display: none;
+  }
+  .team_pic {
+    float: none;
   }
 }
