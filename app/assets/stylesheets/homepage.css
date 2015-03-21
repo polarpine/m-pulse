@@ -234,6 +234,14 @@ a .section-box {
     height: 100px;
     width: 50%;
   }
+  .sliderbox {
+    width: 100%;
+    background-color: rgba(90, 90, 90, 0.3);
+  }
+  .slider-text {
+    opacity: 1;
+  }
+
 }
 
 @media (max-width: 600px) {
@@ -299,9 +307,6 @@ a .section-box {
   }
   .container {
     width: 100%;
-  }
-  .sliderbox {
-    width: 50%;
   }
   .runimg {
     height: 150px;
