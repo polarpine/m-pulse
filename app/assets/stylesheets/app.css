@@ -198,6 +198,9 @@
     width: 40%;
     height: 300px;
   }
+  .app-container {
+    margin-bottom: 20%;
+  }
 }
 
 @media (max-width: 480px) {
