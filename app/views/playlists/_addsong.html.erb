@@ -1,14 +1,24 @@
-<div class="modal fade" id="addSongModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal custom fade" id="addSongModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Search</h4>
+        <h4 class="modal-title" id="searchTitle">Find Your <img src="/assets/mpulselogo.png" height="20px"/></h4>
       </div>
       <div class="modal-body">
-        Form Goes Here
+        <form>
+          <label>Search:<br>
+            <input type="text" name="search" placeholder="eg. Ed Sheeran">
+          </label><br>
+          <label>BPM:<br>
+            <input type="text" id="bpm-field" name="bpm" maxlength="3" placeholder="eg. 150">
+          </label><br>
+          <label>Min/Mile Pace:<br>
+            <input type="text" name="pace" placeholder="eg. 7">
+          </label>
       </div>
       <div class="modal-footer">
+          <button type="submit" class="btn btn-default">Search</button>
+        </form>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>

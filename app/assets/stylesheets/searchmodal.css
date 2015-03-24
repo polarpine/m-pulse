@@ -1,0 +1,52 @@
+.modal.custom .modal-dialog {
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -200px;
+  margin-top: -250px;
+}
+
+.modal-header {
+  color: #F8F8F8;
+  background-color: rgba(0,0,0,0.85);
+  border-bottom: none;
+}
+
+#searchTitle {
+  color: white;
+  font-size: 2em;
+}
+
+.modal-body {
+  color: #F9F9F9;
+  background-color: rgba(0,0,0,0.85);
+  text-align: center;
+}
+
+.modal-body input[type=text] {
+  border-radius: 2px;
+}
+
+#bpm-field {
+  width: 80px;
+}
+
+.modal-footer {
+  color: #F9F9F9;
+  background-color: rgba(0,0,0,0.85);
+  border-top: none;
+  text-align: center;
+}
+
+.modal-footer button {
+  background-color: black;
+  color: #F9F9F9;
+  border: none;
+}
+
+@media (max-width: 1000px) {
+  .modal.custom .modal-dialog {
+    width: 95%;
+  }
+}
