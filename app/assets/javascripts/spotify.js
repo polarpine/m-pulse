@@ -12,7 +12,6 @@ var authorizeUserSpotify = function() {
     console.log("authorizeUserSpotify function")
     console.log(document.location)
     Token = parseURL(document.location)
-
     sessionStorage.setItem('user_token', Token.searchObject.access_token)
 
 }
@@ -49,6 +48,7 @@ var getUserDataSpotify = function() {
             'Authorization': 'Bearer ' + accessToken
         },
         success: function(response){
+            sessionStorage.setItem('user_id', response.id)
             getUserPlaylistsSpotify(response.id, accessToken)
         }
 
