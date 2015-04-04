@@ -49,6 +49,7 @@ var getUserDataSpotify = function() {
         },
         success: function(response){
             sessionStorage.setItem('user_id', response.id)
+            console.log(response)
             getUserPlaylistsSpotify(response.id, accessToken)
         }
 
@@ -58,24 +59,71 @@ var getUserDataSpotify = function() {
 
 
 var getUserPlaylistsSpotify = function(user_id, accessToken) {
+    user_id = user_id || sessionStorage.getItem('user_id')
+    accessToken = accessToken || sessionStorage.getItem('user_token')
     $.ajax({
         url: 'https://api.spotify.com/v1/users/' +user_id+ '/playlists',
         headers: {
             'Authorization': 'Bearer ' + accessToken
         },
         success: function(response){
-            console.log(response.items[0].name)
-            document.getElementById("user_playlists").innerHTML = "Your first five playlists are<br>" +
-            response.items[0].name + '<br>' +
-            response.items[1].name + '<br>' +
-            response.items[2].name + '<br>' +
-            response.items[3].name + '<br>' +
-            response.items[4].name
+            console.log(response.items[3].id)
+            listUserPlaylists(response.items)
         }
 
     });
 }
 
+var listUserPlaylists = function(playlists) {
+    var user_id = sessionStorage.getItem('user_id')
+    console.log(user_id)
+    var playlistHolder = []
+
+  $.each(playlists, function(obj, value){
+    $li = $("<li />", {
+      "class" : "list-group-item"
+    })
+
+    $div1 = $("<div></div>", {
+      "class" : "playlist-name-container"
+    })
+
+    $div2 = $("<div></div>", {
+      "class" : "playlist-player-container"
+    })
+
+    // $("<iframe />", { src: 'https://embed.spotify.com/?uri=spotify:user:'+user_id+':playlist:'+value.id+'width="250" height="80" frameborder="0" allowtransparency="true"', "class": "player_box" }).appendTo($div2)
+    $("<iframe />", { src: 'https://embed.spotify.com/?uri=spotify:user:'+user_id+':playlist:'+value.id, "class": "player_box" }).appendTo($div2)
+
+
+    $("<h3 />", { text: value.name }).appendTo($div1)
+
+    $li.append($div1)
+    $li.append($div2)
+
+    playlistHolder.push($li)
+  });
+
+  $("#user_playlists").html(playlistHolder)
+}
+
+var getPlaylistTracks = function(playlist_id, user_id, accessToken){
+    user_id = user_id || sessionStorage.getItem('user_id')
+    accessToken = accessToken || sessionStorage.getItem('user_token')
+    $.ajax({
+    url: 'https://api.spotify.com/v1/users/'+user_id+'/playlists/'+playlist_id,
+    headers: {
+        'Authorization': 'Bearer ' + accessToken
+    },
+    success: function(response){
+        console.log(response)
+
+    }
+
+});
+
+
+}
 
 
 
