@@ -8,7 +8,7 @@
 }
 
 .modal-header {
-  color: #F8F8F8;
+  color: white;
   background-color: rgba(0,0,0,0.85);
   border-bottom: none;
 }
@@ -19,9 +19,10 @@
 }
 
 .modal-body {
-  color: #F9F9F9;
   background-color: rgba(0,0,0,0.85);
   text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: thin;
 }
 
 .modal-body input[type=text] {
@@ -33,7 +34,7 @@
 }
 
 .modal-footer {
-  color: #F9F9F9;
+  color: white;
   background-color: rgba(0,0,0,0.85);
   border-top: none;
   text-align: center;
