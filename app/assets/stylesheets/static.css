@@ -54,6 +54,9 @@
 .faq_answer{
   font-size: .8em;
 }
+.static-page .modal-body {
+  color: white;
+}
 
 @media (max-width: 1024px) {
   .static-nav {
