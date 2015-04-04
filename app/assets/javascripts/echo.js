@@ -4,8 +4,7 @@
 var userLogin = function() {
   var url = 'https://accounts.spotify.com/authorize/?client_id=' + my_client_id + '&response_type=code&redirect_uri=' + redirect_uri + '&scope=' + scopes
   var w = window.open(url, '_parent', 'scrollbars=yes, resizable=yes, top=500, left=500, width=400, height=400');
-  
-  }
+}
 
 
 //Specs for Spotify API
