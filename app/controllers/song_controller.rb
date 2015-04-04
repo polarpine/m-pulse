@@ -1,5 +1,10 @@
 class SongController < ApplicationController
 
+  def index
+    
+  end
+  
+
   def addSongsMpulse
   	song = Song.new(song_params)
   	song.save

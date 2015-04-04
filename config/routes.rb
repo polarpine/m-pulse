@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   post '/song' => 'song#addSongsMpulse'
   get '/song' => 'song#getSongsMpulse'
+  get '/songs' => 'song#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -8,7 +9,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'mpulse#index'
 
-  get 'callback' => 'mpulse#index'
+  get 'callback' => 'song#index'
 
   get '/about' => 'mpulse#about'
   get '/team' => 'mpulse#team'
