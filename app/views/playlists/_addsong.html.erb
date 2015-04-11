@@ -9,10 +9,16 @@
           <label>Search:<br>
             <input type="text" name="search" placeholder="eg. Ed Sheeran">
           </label><br>
-          <label>BPM:<br>
-            <input type="text" id="bpm-field" name="bpm" maxlength="3" placeholder="eg. 150">
+          <label>
+            <input type=range min=0 max=200 value=100 id=bpm step=1 oninput="outputUpdate(value)">
+            <script>
+            function outputUpdate(vol) {
+            document.querySelector('#thebpm').value = vol + ' BPM';
+            }
+            </script>
+            <output for=bpm id="thebpm">BPM</output>
           </label><br>
-          <label>Min/Mile Pace:<br>
+          <label id="milepace">Min/Mile Pace:<br>
             <input type="text" name="pace" placeholder="eg. 7">
           </label>
       </div>
