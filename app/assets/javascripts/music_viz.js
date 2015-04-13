@@ -11,4 +11,4 @@ visualization = function(){
 };
 
 $(document).ready(visualization);
-$(document).on('page:load', visualization);
+// $(document).on('page:load', visualization);

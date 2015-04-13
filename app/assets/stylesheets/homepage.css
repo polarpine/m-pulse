@@ -52,6 +52,9 @@ html,body {
   -moz-transition: height 0.6s;
   transition: height 0.6s;
 }
+.title-top:hover .top-image {
+  height: 150px;
+}
 .title-bottom {
   text-align: center;
   display: inline-block;
@@ -203,9 +206,13 @@ a .section-box {
   -moz-transition: width 1.5s;
   transition: width 1.5s;
 }
+#HowWorks .flip-container {
+  margin-left: 10%;
+}
 .runimg {
   height: 300px;
   border-radius: 3px;
+  margin-left: 20px;
 }
 .sliderbox:hover .slider-text {
   opacity: 1;
@@ -240,6 +247,10 @@ a .section-box {
   }
   .slider-text {
     opacity: 1;
+  }
+  .footer {
+    margin-bottom: -10px;
+    padding-bottom: 40px;
   }
 
 }

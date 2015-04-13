@@ -6,7 +6,7 @@ scrollClick = function() {
           event.preventDefault();
           $('html, body').animate({
               scrollTop: target.offset().top
-          }, 1000);
+          }, 1500);
       }
   });
 };
