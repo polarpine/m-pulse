@@ -55,6 +55,9 @@
   display: inline-block;
   width: 75%;
 }
+.album:hover {
+  opacity: 0.7;
+}
 .album {
   margin-top: 3%;
   margin-left: 4%;
