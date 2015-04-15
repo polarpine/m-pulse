@@ -88,6 +88,9 @@
   border-top: solid thin #505050;
   display: inline-block;
 }
+.song-section:hover {
+  background-color: rgba(255,255,255,0.2);
+}
 .song-section div {
   float: left;
 }
