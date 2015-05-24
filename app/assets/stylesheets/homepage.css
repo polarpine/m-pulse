@@ -91,6 +91,12 @@ html,body {
 .navbar a {
   font-size: 1.15em;
 }
+#loginSpotify{
+  margin-top: 6px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+}
 .center {
   text-align: center;
 }
