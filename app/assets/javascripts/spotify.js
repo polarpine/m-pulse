@@ -67,7 +67,7 @@ var getUserPlaylistsSpotify = function(user_id, accessToken) {
             'Authorization': 'Bearer ' + accessToken
         },
         success: function(response){
-            console.log(response.items[3].id)
+            console.log(response)
             listUserPlaylists(response.items)
         }
 
@@ -121,9 +121,65 @@ var getPlaylistTracks = function(playlist_id, user_id, accessToken){
     }
 
 });
+}
 
+
+var makeNewPlaylist = function(playlist_name){
+    user_id = sessionStorage.getItem('user_id')
+    accessToken = sessionStorage.getItem('user_token')
+    playlist_name = playlist_name || 'MyPlaylist'
+    playlist_name = 'mpulsity-'+playlist_name
+    $.ajax({
+    url: 'https://api.spotify.com/v1/users/'+user_id+'/playlists',
+    type: 'post',
+    dataType: 'json',
+    data: JSON.stringify({"name": playlist_name, "public": false }),
+    headers: {
+        'Authorization': 'Bearer ' + accessToken,
+        'Content-Type': 'application/json' 
+    },
+    success: function(response){
+        console.log(response.id)
+        addTracksPlaylist(response.id)
+
+    },
+    fail: function(response){
+        console.log(response)
+    }
+
+});
+}
+
+var addTracksPlaylist = function(playlist_id, tracks){
+    tracks = tracks || ["0eGsygTp906u18L0Oimnem", "1301WleyT98MSxVHPZCA6M"]
+    for (i=0; i < tracks.length; i++){
+        tracks[i] = "spotify:track:".concat(tracks[i])
+    }
+
+    user_id = sessionStorage.getItem('user_id')
+    accessToken = sessionStorage.getItem('user_token')
+    $.ajax({
+    url: 'https://api.spotify.com/v1/users/'+user_id+'/playlists/'+playlist_id+'/tracks',
+    type: 'post',
+    dataType: 'json',
+    data: JSON.stringify({"uris": tracks }),
+    headers: {
+        'Authorization': 'Bearer ' + accessToken,
+        'Content-Type': 'application/json' 
+    },
+    success: function(response){
+        console.log(response.id)
+
+    },
+    fail: function(response){
+        console.log(response)
+    }
+
+});
 
 }
+
+
 
 
 
