@@ -13,6 +13,7 @@ var authorizeUserSpotify = function() {
     console.log(document.location)
     Token = parseURL(document.location)
     sessionStorage.setItem('user_token', Token.searchObject.access_token)
+    getUserDataSpotify()
 
 }
 
@@ -68,12 +69,43 @@ var getUserPlaylistsSpotify = function(user_id, accessToken) {
         },
         success: function(response){
             console.log(response)
-            listUserPlaylists(response.items)
+            mpulsityPlaylistFilter(response.items)
         }
 
     });
 }
 
+var mpulsityPlaylistFilter = function(playlists) {
+    filtered_playlists = []
+    for (i=0; i < playlists.length; i++){
+        if (playlists[i].name.startsWith('mpulsity')) { filtered_playlists.push(playlists[i])}
+    }
+    sidebarUserPlaylists(filtered_playlists)
+}
+
+var sidebarUserPlaylists = function(playlists){
+    var user_id = sessionStorage.getItem('user_id')
+    var playlistHolder = []
+      $.each(playlists, function(obj, value){
+    $li = $("<a />", {
+      "class" : "some_class",
+      "href" : "/playlists/show"
+    })
+
+    $div1 = $("<div></div>", {
+      "class" : "playlist"
+    })
+
+
+    $("<div />", { text: value.name.substring(9) }).appendTo($div1)
+
+    $li.append($div1)
+
+    playlistHolder.push($li)
+  });
+
+  $("#user_playlists").html(playlistHolder)
+}    
 var listUserPlaylists = function(playlists) {
     var user_id = sessionStorage.getItem('user_id')
     console.log(user_id)
@@ -128,7 +160,7 @@ var makeNewPlaylist = function(playlist_name){
     user_id = sessionStorage.getItem('user_id')
     accessToken = sessionStorage.getItem('user_token')
     playlist_name = playlist_name || 'MyPlaylist'
-    playlist_name = 'mpulsity-'+playlist_name
+    playlist_name = 'mpulsity-'+pl
     $.ajax({
     url: 'https://api.spotify.com/v1/users/'+user_id+'/playlists',
     type: 'post',
