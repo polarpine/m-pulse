@@ -1,10 +1,10 @@
 
-//Login to Spotify
+// //Login to Spotify
 
-var userLogin = function() {
-  var url = 'https://accounts.spotify.com/authorize/?client_id=' + my_client_id + '&response_type=code&redirect_uri=' + redirect_uri + '&scope=' + scopes
-  var w = window.open(url, '_parent', 'scrollbars=yes, resizable=yes, top=500, left=500, width=400, height=400');
-}
+// var userLogin = function() {
+//   var url = 'https://accounts.spotify.com/authorize/?client_id=' + my_client_id + '&response_type=code&redirect_uri=' + redirect_uri + '&scope=' + scopes
+//   var w = window.open(url, '_parent', 'scrollbars=yes, resizable=yes, top=500, left=500, width=400, height=400');
+// }
 
 
 //Specs for Spotify API
@@ -14,7 +14,7 @@ var my_secret = '41e55c17fba34ef68da571cb70207481'; // Your secret
 var redirect_uri = 'http://localhost:3000/callback'; // Your redirect uri
 
 //Simple Find Song Method
-var findSong = function (query) {
+var findSongSpotify = function (query) {
   query = query || "34gCuhDGsG4bRPIf9bb02f"; //Song for Melissa :)
   $.ajax({
     url: 'https://api.spotify.com/v1/tracks/' + query,
@@ -39,6 +39,7 @@ var findSongsByTempo = function (min, max, style, familiarity, hot) {
 	min = min || '200' //(bpms 0-500)
 	max = max || '330'
 	style = style || 'rock'
+  //'alternative rock' 'pop rock' 'classic rock' 'hip hop' 'country'
 	familiarity = familiarity || '0.5' //(0-1)
 	hot = hot || '.1' //(0-1)
 	$.ajax({
@@ -47,7 +48,7 @@ var findSongsByTempo = function (min, max, style, familiarity, hot) {
 			songs = response.response.songs
 			console.log(songs)
 			for (i = 0; i < songs.length ; i++) {
-    			findSong(songs[i].tracks[0].foreign_id.slice(14));
+    			findSongSpotify(songs[i].tracks[0].foreign_id.slice(14));
 				}
 		
 		}
@@ -64,13 +65,13 @@ var findTempoOfSong = function (spotify_id) {
 			song = response.response.songs[0]
 			console.log(song)
 			console.log(song.title + " by " + song.artist_name + " has " + song.audio_summary.tempo + " bpms")
-			// addSongMpulse(song, spotify_id)
+			// addSongDB(song, spotify_id)
 		
 		}
 	});
 };
 
-var addSongMpulse = function (song, spotify_id) {
+var addSongDB = function (song, spotify_id) {
   var songObj = {
     song: {name: song.title, artist: song.artist_name, bpm: song.audio_summary.tempo, spotifyID: spotify_id }
     }
@@ -86,7 +87,7 @@ var addSongMpulse = function (song, spotify_id) {
     });
 };
 
-var getSongsMpulse = function (bpm) {
+var getSongsDB = function (bpm) {
 	var bpmObj = {song: {bpm_request: bpm}}
     $.ajax({
       url: '/song',
